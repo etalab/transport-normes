@@ -2650,7 +2650,7 @@ passagers)* *–* Element
 </tbody>
 </table>
 
-<div class="table-title">SanitaryEquipment (sanitaires) – Element</div>
+<div class="table-title">SanitaryEquipment (sanitaires) – Élément</div>
 
 <table>
 <colgroup>
@@ -2663,9 +2663,9 @@ passagers)* *–* Element
 <tbody>
 <tr class="odd">
 <td><strong>Classifi­cation</strong></td>
-<td><strong>Name</strong></td>
+<td><strong>Nom</strong></td>
 <td><strong>Type</strong></td>
-<td><strong>Cardin­ality</strong></td>
+<td><strong>Cardin­alité</strong></td>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="even">
@@ -2711,18 +2711,12 @@ passagers)* *–* Element
 <li><p><em>wheelchairBabyChange</em> (espace bébé accessibles en fauteil roulant)</p></li>
 </ul></td>
 </tr>
-
-
-
-
-
-
 <tr class="odd">
 <td></td>
 <td>Wheelchair­TurningCircle</td>
 <td>LengthType</td>
 <td>0:1</td>
-<td>Rayoon de braquage pour les fauteils roulants</td>
+<td>Rayon de braquage pour les fauteils roulants</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -2758,7 +2752,7 @@ passagers)* *–* Element
 <td><em><strong>SupportBarHeigth</strong></em></td>
 <td>xsd:decimal</td>
 <td>0:1</td>
-<td>Hauteur de la barre de support (qund il y en a une)</td>
+<td>Hauteur de la barre de support (quand il y en a une)</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -2766,6 +2760,48 @@ passagers)* *–* Element
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Indique si les toilettes peuvent être verrouillées et donc une clé (ou un outil équivalent) est nécessaire pour y accéder.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="table-title">KeyList pour SanitaryEquipment</div>
+
+<table style="width:100%;">
+<tbody>
+<tr>
+<td><strong>Clef</strong></td>
+<td><strong>Valeurs et description</strong></td>
+</tr>
+<tr>
+<td><em>HandWashing</em></td>
+<td><p>Indique si les sanitaires disposent d'un lavabo permettant un lavage des mains avec du savon :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></li>
+</ul>
+<p>Correspond au tag OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/Key:toilets:handwashing">toilets:handwashing</a>.</p>
+</td>
+</tr>
+<tr>
+<td><em>DrinkingWater</em></td>
+<td><p>Indique si le robinet à l'intérieur des sanitaires fournit de l'eau potable :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></li>
+</ul>
+<p>Correspond au tag OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/FR:Key:drinking_water">drinking_water</a>.</p>
+</td>
+</tr>
+<tr>
+<td><em>ToiletsPosition</em></td>
+<td><p>Indique la position d'utilisation des toilettes, sous la forme d'une liste de valeurs énumérées :</p>
+<ul>
+<li><p><em>seated (position assise)</em></p></li>
+<li><p><em>urinal (position debout)</em></p></li>
+<li><p><em>squat (position accroupie)</em></p></li>
+</ul>
+<p>Correspond au tag OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/Key:toilets:position">toilets:position</a>.</p>
+</td>
 </tr>
 </tbody>
 </table>
