@@ -3075,7 +3075,7 @@ passagers)* *–* Element
 </tbody>
 </table>
 
-<div class="table-title">EntranceEquipment (entrèes) – Element</div>
+<div class="table-title">EntranceEquipment (entrées) – Élément</div>
 
 <table style="width:100%;">
 <colgroup>
@@ -3088,9 +3088,9 @@ passagers)* *–* Element
 <tbody>
 <tr class="odd">
 <td><strong>Classifi­cation</strong></td>
-<td><strong>Name</strong></td>
+<td><strong>Nom</strong></td>
 <td><strong>Type</strong></td>
-<td><strong>Cardin­ality</strong></td>
+<td><strong>Cardin­alité</strong></td>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="even">
@@ -3102,28 +3102,28 @@ passagers)* *–* Element
 </tr>
 <tr class="odd">
 <td>«PK»</td>
-<td><em><strong>id</strong></em></td>
+<td><em>id</em></td>
 <td>EntranceEquipment­IdType</td>
 <td>1:1</td>
 <td>Identifiant du ENTRANCE EQUIPMENT.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>Door</strong></em></td>
+<td><em>Door</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Signale la présence d’une porte (‘<em>false’</em> indique qu’il n’y a pas de porte)</td>
+<td>Signale la présence d’une porte (<em>false</em> indique qu’il n’y a pas de porte)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>KeptOpen</strong></em></td>
+<td><em>KeptOpen</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la si la porte et conservée en position ouverte (pendant les heures d’ouverture)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>RevolvingDoor</strong></em></td>
+<td><em>RevolvingDoor</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale une porte tambour (en complément de <em><strong>Door</strong></em>)</td>
@@ -3137,10 +3137,10 @@ passagers)* *–* Element
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>NumberOfGates</strong></em></td>
+<td><em>NumberOfGates</em></td>
 <td>xsd:integer</td>
 <td>0:1</td>
-<td>Nombre de porte (ou passages)</td>
+<td>Nombre de portes (ou passages)</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -3151,36 +3151,35 @@ passagers)* *–* Element
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>EntranceRequires­Staffing</strong></em></td>
+<td><em>EntranceRequires­Staffing</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale que le passage requiert la présence d’agents du personnel</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>EntranceRequiresTicket</strong></em></td>
+<td><em>EntranceRequiresTicket</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale que le passage requiert un ticket</td>
 </tr>
-
 <tr class="odd">
 <td></td>
-<td><em><strong>AcousticSensor</strong></em></td>
+<td><em>AcousticSensor</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Signale la présence de capteur acvoustiques</td>
+<td>Signale la présence de capteurs acoustiques</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>AutomaticDoor</strong></em></td>
+<td><em>AutomaticDoor</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Signale que le la porte est à ouverture/fermeture automatique</td>
+<td>Signale que la porte est à ouverture/fermeture automatique</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>DropKerbOutside</strong></em></td>
+<td><em>DropKerbOutside</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence de bateaux (abaissement du trottoir) au franchissement du passage</td>
@@ -3194,7 +3193,7 @@ passagers)* *–* Element
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>WheelchairPassable</strong></em></td>
+<td><em>WheelchairPassable</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la possibilité de franchissement en fauteuil roulant.</td>
@@ -3211,48 +3210,47 @@ passagers)* *–* Element
 <td>EntranceAttention</td>
 <td>EntranceAttention­Enum</td>
 <td>0:1</td>
-<td><p>Nature de la sonette ou du signal d’appel</p>
+<td><p>Nature de la sonnette ou du signal d’appel</p>
 <ul>
-<li><p><em>doorbell</em>(sonette)</p></li>
+<li><p><em>doorbell</em> (sonnette)</p></li>
 <li><p><em>helpPoint</em> (point d’aide)</p></li>
 <li><p><em>intercom</em> (intercom)</p></li>
 <li><p><em>none</em> (aucun)</p></li>
 <li><p><em>other</em> (autre)</p></li>
 </ul></td>
 </tr>
-
 <tr class="odd">
 <td></td>
-<td><em><strong>AudioOrVideoIntercom</strong></em></td>
+<td><em>AudioOrVideoIntercom</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la necessité d’une communication audio ou vidéo pour pouvoir entrer</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>Airlock</strong></em></td>
+<td><em>Airlock</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Signale la présenc ed’un sas</td>
+<td>Signale la présence d’un sas</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>DoorstepMark</strong></em></td>
+<td><em>DoorstepMark</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Signale la présente d’une marque de seuil (de franchissement) podotactyle.</td>
+<td>Signale la présente d’une marque de seuil (de franchissement) podotactile.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>AudioPassthroughIndicator</strong></em></td>
+<td><em>AudioPassthroughIndicator</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présente d’un signal sonore de franchissement.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>NecessaryForceToOpen</strong></em></td>
-<td>xsd:boolean</td>
+<td><em>NecessaryForceToOpen</em></td>
+<td>NecessaryForceEnum</td>
 <td>0:1</td>
 <td><p>Force nécessaire pour l’ouverture de la porte</p>
 <ul>
@@ -3262,6 +3260,107 @@ passagers)* *–* Element
 <li><p><em>heavyForce</em> (force importante)</p></li>
 <li><p><em>unknown</em> (inconnu)</p></li>
 </ul></td>
+</tr>
+</tbody>
+</table>
+
+<div class="table-title">KeyList pour EntranceEquipment</div>
+
+<table style="width:100%;">
+<tbody>
+<tr class="odd">
+<td><strong>Clef</strong></td>
+<td><strong>Valeurs et description</strong></td>
+</tr>
+<tr>
+<td><em>EntranceImportance</em></td>
+<td><p>Importance de l'entrée :</p>
+<ul>
+<li><p><em>mainEntrance (entrée principale)</em></p></li>
+<li><p><em>secondaryEntrance (entrée secondaire)</em></p></li>
+<li><p><em>siteEntrance (entrée de site)</em></p></li>
+<li><p><em>serviceEntrance (entrée de service, principalement pour les employés et les livraisons)</em></p></li>
+<li><p><em>emergencyEntrance (sortie de secours)</em></p></li>
+</ul>
+<p>À rapprocher de l'attribut ENTREE.type dans le standard CNIG et du tag OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/FR:Key:entrance">entrance</a>.</p>
+</td>
+</tr>
+<tr>
+<td><em>RampDoorbell</em></td>
+<td><p>Indique si l'entrée dispose d'une sonnette au droit de la rampe. Pertinent uniquement lorsqu'il y a une rampe amovible :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></p></li>
+</ul>
+<p>Correspond à l'attribut ENTREE.rampeSonnette dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>Recognizable</em></td>
+<td><p>Indique si l’entrée est facilement repérable dans son environnement en tenant compte de l'architecture, de la signalisation et du contraste visuel :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></p></li>
+</ul>
+<p>Correspond à l'attribut ENTREE.reperabilite dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>DedicatedSign</em></td>
+<td><p>Indique s'il y a une signalétique spécifique à l'entrée :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></p></li>
+</ul>
+<p>Correspond à l'attribut ENTREE.signaletique dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>TurningSpace</em></td>
+<td><p>Position de l'espace de manœuvre :</p>
+<ul>
+<li><p><em>none (pas d'espace de manœuvre)</em></p></li>
+<li><p><em>outside (extérieur)</em></p></li>
+<li><p><em>inside (intérieur)</em></p></li>
+<li><p><em>insideAndOutside (intérieur et extérieur)</em></p></li>
+</ul>
+<p>L'espace de manœuvre est un espace laissé à proximité immédiate de la porte pour la manœuvrer correctement et il se matérialise par un rectangle situé à la base de la porte.</p>
+<p>Correspond à l'attribut ENTREE.espaceManœuvre dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>OutsideTurningSpaceWidth</em></td>
+<td>La plus petite dimension de l'espace de manœuvre extérieur, en mètres arrondis au cm.</td>
+</tr>
+<tr>
+<td><em>OutsideTurningSpaceLength</em></td>
+<td>La plus grande dimension de l'espace de manœuvre extérieur, en mètres arrondis au cm.</td>
+</tr>
+<tr>
+<td><em>InsideTurningSpaceWidth</em></td>
+<td>La plus petite dimension de l'espace de manœuvre intérieur, en mètres arrondis au cm.</td>
+</tr>
+<tr>
+<td><em>InsideTurningSpaceLength</em></td>
+<td>La plus grande dimension de l'espace de manœuvre intérieur, en mètres arrondis au cm.</td>
+</tr>
+<tr>
+<td><em>DoorHandle</em></td>
+<td><p>Le type de poignée :</p>
+<ul>
+<li><p><em>none (pas de poignée)</em></p></li>
+<li><p><em>lever (poignée à levier)</em></p></li>
+<li><p><em>button (bouton)</em></p></li>
+<li><p><em>knob (pommeau)</em></p></li>
+<li><p><em>crashBar (barre antipanique)</em></p></li>
+<li><p><em>landing (poignée palière)</em></p></li>
+<li><p><em>pull (poignée de tirage)</em></p></li>
+<li><p><em>windowLever (levier de fenêtre)</em></p></li>
+<li><p><em>vertical (bâton de maréchal, barre verticale)</em></p></li>
+<li><p><em>other (autre)</em></p></li>
+</ul>
+<p>À rapprocher de l'attribut ENTREE.typePoignée dans le standard CNIG et du tag OpenStreetMap door:handle.</p>
+</td>
 </tr>
 </tbody>
 </table>
