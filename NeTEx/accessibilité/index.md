@@ -3654,19 +3654,39 @@ passagers)* *–* Element
 | «PK»                | id                  | StairFlightIdType | 1:1              | Identifiant du STAIR FLIGHT.                                            |
 |                     | Continuing­Handrail | xsd:boolean       | 0:1              | Signale une main courante continue avec la volées de marches précédente |
 
-<div class="table-title">EscalatorEquipment (escalator) – Element</div>
+<div class="table-title">EscalatorEquipment (escalator) – Élément</div>
 
-|                     |                            |                  |                  |                                                                                                                             |
-|---------------------|----------------------------|------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **Classifi­cation** | **Name**                   | **Type**         | **Cardin­ality** | **Description**                                                                                                             |
-| *::>*               | *::>*                      | *StairEquipment* | *::>*            | ESCALATOR hérite de STAIR EQUIPMENT                                                                                         |
-| «PK»                | id                         | EscalatorIdtype  | 1:1              | Identifiant du ESCALATOR.                                                                                                   |
-|                     | TactileActuators           | xsd:boolean      | 0:1              | Signale une mise en marche par détecteur (tactile ou autre)                                                                 |
-|                     | EnergySaving               | xsd:boolean      | 0:1              | Signale un escalator à économie d’énergie (ralentissement ou arrêt quand il n’est pas utilisé)                              |
-|                     | ***DogsMustBeCarried***    | xsd:boolean      | 0:1              | Signale si les chiens doivent être pris dans les bras (ou transporté d’une autre manière) pour pouvoir franchir l’escalator |
-|                     | ***EscalatorWithLanding*** | xsd:boolean      | 0:1              | Signale un escalator avec une zone plate au début ou à la fin                                                               |
+| **Classifi­cation** | **Nom  **             | **Type**         | **Cardin­alité** | **Description**                                                                                                              |
+| ------------------- | -------------------- | ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| *::>*               | *::>*                | *StairEquipment* | *::>*            | ESCALATOR hérite de STAIR EQUIPMENT                                                                                          |
+| «PK»                | id                   | EscalatorIdtype  | 1:1              | Identifiant de l'ESCALATOR.                                                                                                  |
+|                     | TactileActuators     | xsd:boolean      | 0:1              | Signale une mise en marche par détecteur (tactile ou autre)                                                                  |
+|                     | EnergySaving         | xsd:boolean      | 0:1              | Signale un escalator à économie d’énergie (ralentissement ou arrêt quand il n’est pas utilisé)                               |
+|                     | DogsMustBeCarried    | xsd:boolean      | 0:1              | Signale si les chiens doivent être pris dans les bras (ou transportés d’une autre manière) pour pouvoir franchir l’escalator |
+|                     | EscalatorWithLanding | xsd:boolean      | 0:1              | Signale un escalator avec une zone plate au début ou à la fin                                                                |
 
-<div class="table-title">TravelatorEquipment(tapis roulant) – Element</div>
+<div class="table-title">KeyList pour EscalatorEquipment</div>
+
+<table style="width:100%;">
+<tbody>
+<tr class="odd">
+<td><strong>Clef</strong></td>
+<td><strong>Valeurs et description</strong></td>
+</tr>
+<tr>
+<td><em>MonitoringRemoteControl</em></td>
+<td><p>Indique si l’escalator est équipé d’un système de contrôle du fonctionnement à distance :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></li>
+</ul>
+<p>Correspond à l'attribut ESCALATOR.supervision dans le standard CNIG.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="table-title">TravelatorEquipment (tapis roulant) – Element</div>
 
 |                     |                                |                        |                  |                                                                                                    |
 |---------------------|--------------------------------|------------------------|------------------|----------------------------------------------------------------------------------------------------|
