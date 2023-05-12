@@ -3519,16 +3519,7 @@ passagers)* *–* Element
 </tbody>
 </table>
 
-<div class="table-title">StairEquipment (escaliers) – Element</div>
-
-|                     |            |                        |                  |                                    |
-|---------------------|------------|------------------------|------------------|------------------------------------|
-| **Classifi­cation** | **Name**   | **Type**               | **Cardin­ality** | **Description**                    |
-| *::>*               | *::>*      | *PlaceAccessEquipment* | *::>*            | STAIR hérite de ACCESS EQUIPMENT   |
-| «PK»                | id         | StairIdType            | 1:1              | Identifiant du STAIR.              |
-|                     | StairGroup | StairGroup             | 1:1              | Prorpiétés auommunes aux escaliers |
-
-<div class="table-title">StairGroup (série de marches d’escaliers) – Group</div>
+<div class="table-title">StaircaseEquipment (escalier) – Élément </div>
 
 <table>
 <colgroup>
@@ -3541,112 +3532,185 @@ passagers)* *–* Element
 <tbody>
 <tr class="odd">
 <td><strong>Classifi­cation</strong></td>
-<td><strong>Name</strong></td>
+<td><strong>Nom</strong></td>
 <td><strong>Type</strong></td>
-<td><strong>Cardin­ality</strong></td>
+<td><strong>Cardin­alité</strong></td>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="even">
-<td></td>
+<td><em>::></em></td>
+<td><em>::></em></td>
+<td><em>StairEquipment</em></td>
+<td><em>::></em></td>
+<td>STAIRCASE hérite de STAIR EQUIPMENT (qui hérite de ACCESS EQUIPMENT).</td>
+</tr>
+<tr class="odd">
+<td>«PK»</td>
+<td>id</td>
+<td>StaircaseIdType</td>
+<td>1:1</td>
+<td>Identifiant du STAIRCASE.</td>
+</tr>
+<tr class="even">
+<td rowspan="8">StairGroup</td>
 <td>Depth</td>
 <td>LengthType</td>
 <td>0:1</td>
 <td>Hauteur (profondeur) de l’escalier</td>
 </tr>
 <tr class="odd">
-<td></td>
 <td>NumberOfSteps</td>
 <td>xsd:integer</td>
 <td>0:1</td>
 <td>Nombre de marches</td>
 </tr>
 <tr class="even">
-<td></td>
 <td>StepHeight</td>
 <td>LengthType</td>
 <td>0:1</td>
 <td>Hauteur des marches (individuellement)</td>
 </tr>
 <tr class="odd">
-<td></td>
 <td>StepColourContrast</td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Indique les le bodure de marche se distingue par un signalement par contraste coloré</td>
+<td><p>Indique la présence d'une bande visuellement contrastée permettant de bien distinguer le bord des marches.</p>
+<p><span class="hl">Les bandes doivent être présentes sur chaque marche, sur l'intégralité de la largeur des marches et d'une profondeur de 2 cm.</span></p>
+</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>TypeOfHandrail</td>
+<td>HandrailType</td>
 <td><em>HandrailEnum</em></td>
 <td>0:1</td>
 <td><p>Type de main courante</p>
 <ul>
-<li><p><em>None</em> (aucun)</p></li>
+<li><p><em>none</em> (aucun)</p></li>
 <li><p><em>oneSide</em> (d’un côté seulement)</p></li>
 <li><p><em>bothSides</em> (des deux côtés)</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td></td>
 <td>HandrailHeight</td>
 <td>LengthType</td>
 <td>0:1</td>
 <td>Hauteur de la main courante (à partir de la marche)</td>
 </tr>
 <tr class="even">
-<td></td>
 <td>LowerHandrailHeight</td>
 <td>LengthType</td>
 <td>0:1</td>
 <td>Hauteur d’une éventuelle seconde main courante abaissée</td>
 </tr>
 <tr class="odd">
-<td>«cntd»</td>
-<td>TopEnd</td>
-<td>StairEnd</td>
-<td>0:1</td>
-<td>Caractérisation de l’extrèmité haute de l’escalier</td>
-</tr>
-<tr class="even">
-<td>«cntd»</td>
-<td>BottomEnd</td>
-<td>StairEnd</td>
-<td>0:1</td>
-<td>Caractérisation de l’extrèmité basse de l’escalier</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><em><strong>WithoutRiser</strong></em></td>
+<td>WithoutRiser</td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale des marches ouvertes (pas de contremarches)</td>
 </tr>
+<tr class="even">
+<td>«cntd»</td>
+<td>TopEnd</td>
+<td>StairEnd</td>
+<td>0:1</td>
+<td>Caractérisation de l’extrémité haute de l’escalier</td>
+</tr>
+<tr class="odd">
+<td>«cntd»</td>
+<td>BottomEnd</td>
+<td>StairEnd</td>
+<td>0:1</td>
+<td>Caractérisation de l’extrémité basse de l’escalier</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Continuous­Handrail</td>
+<td>xsd:boolean</td>
+<td>0:1</td>
+<td>Indique si la main courante est continue et sans rupture sur toute la longueur de l’escalier, y compris entre les volées de marches</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>SpiralStair</td>
+<td>xsd:boolean</td>
+<td>0:1</td>
+<td>Signale un escalier en spirale</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>NumberOfFlights</td>
+<td>xsd:integer</td>
+<td>0:1</td>
+<td>Nombre de volées de marches</td>
+</tr>
+<tr class="odd">
+<td>«cntd»</td>
+<td>flights</td>
+<td>StairFlight</td>
+<td>0:\*</td>
+<td>Description des volées de marche constituant l’escalier</td>
+</tr>
 </tbody>
 </table>
 
-<div class="table-title">StairEnd (extrèmités d’escaliers) – Element</div>
+<div class="table-title">KeyList pour StaircaseEquipment</div>
 
-|                     |                           |             |                  |                                                                                                      |
-|---------------------|---------------------------|-------------|------------------|------------------------------------------------------------------------------------------------------|
-| **Classifi­cation** | **Name**                  | **Type**    | **Cardin­ality** | **Description**                                                                                      |
-|                     | ***Continuing­Handrail*** | xsd:boolean | 0:1              | Signale une main courante continue avec la suite de l’escalier                                       |
-|                     | ***TexturedSurface***     | xsd:boolean | 0:1              | Signale une surface au sol texturée                                                                  |
-|                     | VisualContrast            | xsd:boolean | 0:1              | Indique un signalement (du début ou de la fin de l’escalier suivant le cas) par contraste de couleur |
+<table style="width:100%;">
+<tbody>
+<tr>
+<td><strong>Clef</strong></td>
+<td><strong>Valeurs et description</strong></td>
+</tr>
+<tr>
+<td><em>StepLength</em></td>
+<td><p>La longueur de la marche, en mètres arrondis au cm.</p>
+<p>Correspond à l'attribut ESCALIER.giron dans le standard CNIG.</p></td>
+</tr>
+<tr>
+<td><em>StepCondition</em></td>
+<td><p>Indique la régularité des marches :</p>
+<ul>
+<li><p><em>even (l'escalier dispose de marches régulières, toutes de même hauteur et profondeur)</em></p></li>
+<li><p><em>uneven (les marches ne sont pas toutes de même taille)</em></p></li>
+<li><p><em>rough (les marches sont de taille très différentes, certaines peuvent être manquantes ou fortement en pente)</em></p></li>
+</ul>
+<p>Correspond au tag OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/FR:Key:step:condition">step:condition</a>.</p>
+</td>
+</tr>
+<tr>
+<td><em>StairRamp</em></td>
+<td><p>Indique la présence d'une rampe inclue au sein de l'escalier :</p>
+<ul>
+<li><p><em>bicycle (une rampe peu large sur le côté, prévue pour pousser un vélo)</em></p></li>
+<li><p><em>luggage (une rampe sur le côté, prévue pour faire rouler une valise)</em></p></li>
+<li><p><em>stroller (une paire de rampes avec des marches entre les deux, prévue pour pousser une poussette)</em></p></li>
+<li><p><em>other (un autre type de rampe incluse dans l'escalier lui-même)</em></p></li>
+<li><p><em>none (pas de rampe dans l'escalier)</em></p></li>
+</ul>
+<p>Correspond aux tags OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/FR:Key:ramp">ramp et ramp:*</a>.</p>
+</td>
+</tr>
+<tr>
+<td><em>TactileWriting</em></td>
+<td><p>Indique la présence de signalétique qui peut être lue de manière tactile (en braille par exemple) sur la main courante :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></li>
+</ul>
+<p>Correspond aux tags OpenStreetMap <a target="_blank" href="https://wiki.openstreetmap.org/wiki/FR:Key:tactile_writing">tactile_writing et tactile_writing:*</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
-<div class="table-title">StaircaseEquipment (escaliers composé de plusieurs volées)</div>
-*–* Element
+<div class="table-title">StairEnd (extrémités d’escaliers) – Élément</div>
 
-|                     |                     |                  |                  |                                                                     |
-|---------------------|---------------------|------------------|------------------|---------------------------------------------------------------------|
-| **Classifi­cation** | **Name**            | **Type**         | **Cardin­ality** | **Description**                                                     |
-| *::>*               | *::>*               | *StairEquipment* | *::>*            | STAIRCASE hérite de STAIR EQUIPMENT.                                |
-| «PK»                | id                  | StaircaseIdType  | 1:1              | Identifiant du STAIRCASE.                                           |
-|                     | Continuous­Handrail | xsd:boolean      | 0:1              | Signale une main courante continue avec entre les volées de marches |
-|                     | SpiralStair         | xsd:boolean      | 0:1              | Signale un escalier en spiral                                       |
-|                     | NumberOfFlights     | xsd:integer      | 0:1              | Nombre de volées de marches                                         |
-| «cntd»              | flights             | StairFlight      | 0:\*             | Description des volées de marche constituant l’escalier             |
+| **Classifi­cation** | **Name**            | **Type**    | **Cardin­alité** | **Description**                                                                                                                                                                                                                                                                        |
+| ------------------- | ------------------- | ----------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                     | Continuing­Handrail | xsd:boolean | 0:1              | Indique si la main courante de l'escalier se prolonge au-delà des marches. <br> <span class="hl">La prolongation doit être au moins égale à la largeur d'une marche.</span>                                                                                                            |
+|                     | TexturedSurface     | xsd:boolean | 0:1              | Signale une surface au sol texturée. <br> <span class="hl">On indiquera ainsi la présence d'une bande d'éveil à la vigilance (BEV).</span>                                                                                                                                             |
+|                     | VisualContrast      | xsd:boolean | 0:1              | Indique un signalement (du début ou de la fin de l’escalier suivant le cas) par contraste de couleur  <br> <span class="hl">On indiquera ainsi par exemple la présence de contremarches d'une couleur différente du reste de l'escalier pour la première et la dernière marche.</span> |
 
-<div class="table-title">StairFlight (volées de marche d’excalier) – Element</div>
+<div class="table-title">StairFlight (volées de marche d’escalier) – Élément</div>
 
 |                     |                     |                   |                  |                                                                         |
 |---------------------|---------------------|-------------------|------------------|-------------------------------------------------------------------------|
