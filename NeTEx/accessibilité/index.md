@@ -2529,8 +2529,8 @@ Les tableaux ci-dessous fournissent les détails des attributs propres à
 chaque type d'équipement.
 
 Dans un certain nombre de cas, des attributs complémentaires ont été
-demandé pour le profil accessibilité. Pour répondre à cette semande, on
-utilise le mécaniseme d'extension par clé-valeur proposé par NeTEx (voir
+demandés pour le profil accessibilité. Pour répondre à cette demande, on
+utilise le mécanisme d'extension par clef-valeur proposé par NeTEx (KeyList, voir
 le profil Éléments Commun pour plus de détail sur ce mécanisme). Les
 tableaux contenants ces extensions sont présentées à la suite des
 descriptions des objets qu'ils complètent.
@@ -2962,7 +2962,7 @@ passagers)* *–* Element
 |                     |                       |                            |                  |                                                                         |
 |                     | ***SafeForGuideDog*** | *xsd:boolean*              | 0:1              | Signale si l’accès est sans risqué pour un chien guide.                 |
 
-<div class="table-title">CrossingEquipment (croisements et traversées) – Element</div>
+<div class="table-title">CrossingEquipment (croisements et traversées) – Élément</div>
 
 <table>
 <colgroup>
@@ -2975,9 +2975,9 @@ passagers)* *–* Element
 <tbody>
 <tr class="odd">
 <td><strong>Classifi­cation</strong></td>
-<td><strong>Name</strong></td>
+<td><strong>Nom</strong></td>
 <td><strong>Type</strong></td>
-<td><strong>Cardin­ality</strong></td>
+<td><strong>Cardin­alité</strong></td>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="even">
@@ -2996,74 +2996,73 @@ passagers)* *–* Element
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>CrossingType</strong></em></td>
-<td>CrossingtTypeEnum</td>
+<td><em>CrossingType</em></td>
+<td>CrossingTypeEnum</td>
 <td>0:1</td>
 <td><p>Type de CROSSING:</p>
 <ul>
-<li><p><em>levelCrossing</em> (passage a niveau)</p></li>
-<li><p><em>barrowCrossing</em> (passage a niveau sans passage à niveau)</p></li>
-<li><p><em>roadCrossing</em> (passage piétion, trzaversée de route)</p></li>
-<li><p><em>roadCrossingWithIsland</em> (passage piéton avec ilot en centre de voirie)</p></li>
-<li><p><em>other</em>( autre)</p></li>
+<li><p><em>levelCrossing</em> (passage à niveau)</p></li>
+<li><p><em>barrowCrossing</em> (passage à niveau sans barrière)</p></li>
+<li><p><em>roadCrossing</em> (passage piéton, traversée de route)</p></li>
+<li><p><em>roadCrossingWithIsland</em> (passage piéton avec îlot en centre de voirie)</p></li>
+<li><p><em>other</em> (autre)</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>ZebraCrossing</strong></em></td>
+<td><em>ZebraCrossing</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence de zebras</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>PedestrianLights</strong></em></td>
+<td><em>PedestrianLights</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
-<td>Signale la présence de feu de signalisation pour le passage</td>
+<td>Signale la présence de feu pour les piétons</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>AcousticDeviceSensors</strong></em></td>
+<td><em>AcousticDeviceSensors</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence de capteurs de signaux</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>AccousticCrossingAid</strong></em></td>
+<td><em>AcousticCrossingAids</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence d’une aide acoustique à la traversée</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>TactileGuideStrips</strong></em></td>
+<td><em>TactileGuidanceStrips</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence de bandes de guidage podotactiles</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><em><strong>VisualGuidanceBands</strong></em></td>
+<td><em>VisualGuidanceBands</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence de bandes de guidage visuel</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><em><strong>DroppedKerb</strong></em></td>
+<td><em>DroppedKerb</em></td>
 <td>xsd:boolean</td>
 <td>0:1</td>
 <td>Signale la présence de bateaux (abaissement du trottoir) des deux côtés.</td>
 </tr>
-
 <tr class="odd">
 <td></td>
-<td><em><strong>TactileWarningStrip</strong></em></td>
+<td><em>TactileWarningStrip</em></td>
 <td><em>TactileWarningEnum</em></td>
 <td>0:1</td>
-<td><p>Signale la présence de bandes de d’interception podotactiles (dans le sens du PATHLINK associé):</p>
+<td><p>Signale la présence de bandes d’interception podotactiles (dans le sens du PATHLINK associé):</p>
 <ul>
 <li><p><em>TactileStripAtBeginning</em> (bande d’interception au début)</p></li>
 <li><p><em>TactileStripAtEnd</em> (bande d’interception à la fin)</p></li>
@@ -3071,6 +3070,78 @@ passagers)* *–* Element
 <li><p><em>noTactileStrip</em> (pas de bande d’interception)</p></li>
 <li><p><em>unknown</em></p></li>
 </ul></td>
+</tr>
+</tbody>
+</table>
+
+<div class="table-title">KeyList pour CrossingEquipment</div>
+
+<table style="width:100%;">
+<tbody>
+<tr class="odd">
+<td><strong>Clef</strong></td>
+<td><strong>Valeurs et description</strong></td>
+</tr>
+<tr>
+<td><em>MarkingStatus</em></td>
+<td><p>État du marquage au sol de la traversée piétonne :</p>
+<ul>
+<li><p><em>none (pas de marquage)</em></p></li>
+<li><p><em>good (bon état)</em></p></li>
+<li><p><em>worn (dégradation sans gravité)</em></p></li>
+<li><p><em>discomfortable (dégradation entraînant une difficulté d'usage ou d'inconfort)</em></p></li>
+<li><p><em>hazardous (dégradation entraînant un problème de sécurité immédiat)</em></p></li>
+</ul>
+<p>Correspond à l'attribut TRAVERSEE.marquageSol dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>VibratingCrossingAids</em></td>
+<td><p>Signale la présence d'un dispositif délivrant des vibrations pour faciliter la traversée des déficients visuels :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></p></li>
+</ul>
+<p>Correspond aux tags OpenStreetMap <a target='_blank' href='https://wiki.openstreetmap.org/wiki/Key:traffic_signals:vibration'>traffic_signals:vibration</a> et <a target='_blank' href='https://wiki.openstreetmap.org/wiki/Key:traffic_signals:floor_vibration'>traffic_signals:floor_vibration</a>.</p>
+</td>
+</tr>
+<tr>
+<td><em>BumpCrossing</em></td>
+<td><p>Indique si la traversée piétonne est convexe, bombée (elle monte puis descend) :</p>
+<ul>
+<li><p><em>true</em></p></li>
+<li><p><em>false</em></p></li>
+</ul>
+<p>Correspond à l'attribut TRAVERSEE.chausseeBombee dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>VisualObstacle</em></td>
+<td><p>Indique la présence et le type d'obstacle visuel à la visibilité :</p>
+<ul>
+<li><p><em>none (aucun)</em></p></li>
+<li><p><em>carParking (stationnement voiture)</em></p></li>
+<li><p><em>vegetation (végétation)</em></p></li>
+<li><p><em>building (bâti)</em></p></li>
+<li><p><em>streetFurniture (mobilier urbain)</em></p></li>
+<li><p><em>other (autre)</em></p></li>
+</ul>
+<p>L'obstacle visuel est un élément, positionné jusqu'à 5 mètres en amont de la traversée, et qui gêne le piéton pour voir et être vu au moment de traverser.</p>
+<p>À rapprocher de l'attribut TRAVERSEE.covisibilite dans le standard CNIG.</p>
+</td>
+</tr>
+<tr>
+<td><em>BollardCrossing</em></td>
+<td><p>Indique la présence de potelets destinés à protéger les piétons :</p>
+<ul>
+<li><p><em>none (pas de potelets)</em></p></li>
+<li><p><em>contrasted : potelets de part et d'autre et bien contrastés par rapport à l'environnement</em></p></li>
+<li><p><em>yes : potelets de part et d'autre de la traversée</em></p></li>
+<li><p><em>partial : potelets uniquement d'un côté de la traversée</em></p></li>
+<li><p><em>limited : potelets présents trop bas ou mal positionnés par rapport à la traversée</em></p></li>
+</ul>
+<p>Correspond au tag OpenStreetMap <a target='_blank' href='https://wiki.openstreetmap.org/wiki/Key:crossing:bollard'>crossing:bollard</a>.</p>
+</td>
 </tr>
 </tbody>
 </table>
